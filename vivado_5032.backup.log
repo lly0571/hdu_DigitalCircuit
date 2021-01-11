@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jan  8 23:25:29 2021
+# Process ID: 5032
+# Current directory: F:/TEST/Taxi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2060 F:\TEST\Taxi\Taxi.xpr
+# Log file: F:/TEST/Taxi/vivado.log
+# Journal file: F:/TEST/Taxi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/TEST/Taxi/Taxi.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SOFT/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 816.641 ; gain = 176.930
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jan  9 00:10:26 2021...

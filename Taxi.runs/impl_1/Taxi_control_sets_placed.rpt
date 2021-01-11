@@ -1,0 +1,142 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sat Jan  9 16:39:15 2021
+| Host         : MS-TZGHSZFXHWMF running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Taxi_control_sets_placed.rpt
+| Design       : Taxi
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    64 |
+|    Minimum number of control sets                        |    64 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   415 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    64 |
+| >= 0 to < 4        |    57 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              36 |           11 |
+| No           | No                    | Yes                    |              16 |           16 |
+| No           | Yes                   | No                     |              89 |           39 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              36 |           24 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+----------------+---------------------------------+------------------+----------------+
+|           Clock Signal           |  Enable Signal |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++----------------------------------+----------------+---------------------------------+------------------+----------------+
+|  w/fare_reg[3]_LDC_i_1_n_0       |                | w/fare_reg[3]_LDC_i_2_n_0       |                1 |              1 |
+|  w/fare_reg[12]_LDC_i_1_n_0      |                | w/fare_reg[12]_LDC_i_2_n_0      |                1 |              1 |
+|  w/fare_reg[0]_LDC_i_1_n_0       |                | w/fare_reg[0]_LDC_i_2_n_0       |                1 |              1 |
+|  w/fare_reg[11]_LDC_i_1_n_0      |                | w/fare_reg[11]_LDC_i_2_n_0      |                1 |              1 |
+|  w/fare_reg[10]_LDC_i_1_n_0      |                | w/fare_reg[10]_LDC_i_2_n_0      |                1 |              1 |
+|  w/fare_reg[14]_LDC_i_1_n_0      |                | w/fare_reg[14]_LDC_i_2_n_0      |                1 |              1 |
+|  w/fare_reg[15]_LDC_i_1_n_0      |                | w/fare_reg[15]_LDC_i_2_n_0      |                1 |              1 |
+|  w/fare_reg[13]_LDC_i_1_n_0      |                | w/fare_reg[13]_LDC_i_2_n_0      |                1 |              1 |
+|  w/fare_reg[8]_LDC_i_1_n_0       |                | w/fare_reg[8]_LDC_i_2_n_0       |                1 |              1 |
+|  w/fare_reg[4]_LDC_i_1_n_0       |                | w/fare_reg[4]_LDC_i_2_n_0       |                1 |              1 |
+|  w/fare_reg[1]_LDC_i_1_n_0       |                | w/fare_reg[1]_LDC_i_2_n_0       |                1 |              1 |
+|  w/fare_reg[2]_LDC_i_1_n_0       |                | w/fare_reg[2]_LDC_i_2_n_0       |                1 |              1 |
+|  w/fare_reg[9]_LDC_i_1_n_0       |                | w/fare_reg[9]_LDC_i_2_n_0       |                1 |              1 |
+|  w/fare_reg[7]_LDC_i_1_n_0       |                | w/fare_reg[7]_LDC_i_2_n_0       |                1 |              1 |
+|  w/fare_reg[5]_LDC_i_1_n_0       |                | w/fare_reg[5]_LDC_i_2_n_0       |                1 |              1 |
+|  w/fare_reg[6]_LDC_i_1_n_0       |                | w/fare_reg[6]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/watingtime_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  w/watingtime_reg[0]_LDC_i_1_n_0 |                | w/watingtime_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  w/watingtime_reg[1]_LDC_i_1_n_0 |                | w/watingtime_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  w/watingtime_reg[3]_LDC_i_1_n_0 |                | w/watingtime_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  w/watingtime_reg[2]_LDC_i_1_n_0 |                | w/watingtime_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/watingtime_reg[1]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/watingtime_reg[3]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/watingtime_reg[2]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[3]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[0]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[10]_LDC_i_2_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[12]_LDC_i_2_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[11]_LDC_i_2_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[13]_LDC_i_2_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[14]_LDC_i_2_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[15]_LDC_i_2_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[8]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[4]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[1]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[2]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[7]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[9]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[5]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     |                | w/fare_reg[6]_LDC_i_2_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[12]_LDC_i_1_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[0]_LDC_i_1_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[11]_LDC_i_1_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[10]_LDC_i_1_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[14]_LDC_i_1_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[15]_LDC_i_1_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[13]_LDC_i_1_n_0      |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[3]_LDC_i_1_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[4]_LDC_i_1_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[1]_LDC_i_1_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[2]_LDC_i_1_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[9]_LDC_i_1_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[7]_LDC_i_1_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[5]_LDC_i_1_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[6]_LDC_i_1_n_0       |                1 |              1 |
+|  clk_1s_BUFG                     | j3/key_p_reg_0 | w/fare_reg[8]_LDC_i_1_n_0       |                1 |              1 |
+|  f/CLK                           |                |                                 |                2 |              3 |
+|  clk_100M_IBUF_BUFG              |                |                                 |                3 |              5 |
+|  w/seg_reg[7]_i_2_n_0            |                |                                 |                3 |              8 |
+|  clk_100M_IBUF_BUFG              |                | f/counter1[8]_i_1_n_0           |                3 |              9 |
+|  clk_1s_BUFG                     | j2/key_p_reg_0 | j1/key_p_reg_0                  |                4 |             16 |
+|  f/clk_001                       |                |                                 |                3 |             20 |
+|  clk_100M_IBUF_BUFG              |                | f/clk_001_0                     |                8 |             30 |
+|  clk_100M_IBUF_BUFG              |                | f/clk_1s_2                      |                8 |             30 |
++----------------------------------+----------------+---------------------------------+------------------+----------------+
+
+

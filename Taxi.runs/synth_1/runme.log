@@ -1,0 +1,407 @@
+
+*** Running vivado
+    with args -log Taxi.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Taxi.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Taxi.tcl -notrace
+Command: synth_design -top Taxi -part xc7a100tcsg324-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-2L
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4168 
+WARNING: [Synth 8-2292] literal value truncated to fit in 9 bits [F:/TEST/Taxi/Taxi.srcs/sources_1/new/Fdiv.v:46]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 814.184 ; gain = 181.637
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Taxi' [F:/TEST/Taxi/Taxi.srcs/sources_1/new/Taxi.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Fdiv' [F:/TEST/Taxi/Taxi.srcs/sources_1/new/Fdiv.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Fdiv' (1#1) [F:/TEST/Taxi/Taxi.srcs/sources_1/new/Fdiv.v:23]
+INFO: [Synth 8-6157] synthesizing module 'JoggleRemove' [F:/TEST/Taxi/Taxi.srcs/sources_1/new/JoggleRemove.v:23]
+	Parameter S0 bound to: 3'b000 
+	Parameter S1 bound to: 3'b001 
+	Parameter S2 bound to: 3'b010 
+	Parameter S3 bound to: 3'b011 
+	Parameter S4 bound to: 3'b100 
+	Parameter S5 bound to: 3'b101 
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [F:/TEST/Taxi/Taxi.srcs/sources_1/new/JoggleRemove.v:28]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [F:/TEST/Taxi/Taxi.srcs/sources_1/new/JoggleRemove.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'JoggleRemove' (2#1) [F:/TEST/Taxi/Taxi.srcs/sources_1/new/JoggleRemove.v:23]
+INFO: [Synth 8-6157] synthesizing module 'work' [F:/TEST/Taxi/Taxi.srcs/sources_1/new/work.v:23]
+WARNING: [Synth 8-567] referenced signal 'mileage' should be on the sensitivity list [F:/TEST/Taxi/Taxi.srcs/sources_1/new/work.v:117]
+WARNING: [Synth 8-567] referenced signal 'fare' should be on the sensitivity list [F:/TEST/Taxi/Taxi.srcs/sources_1/new/work.v:117]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/TEST/Taxi/Taxi.srcs/sources_1/new/work.v:133]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/TEST/Taxi/Taxi.srcs/sources_1/new/work.v:146]
+WARNING: [Synth 8-567] referenced signal 'bit_sel' should be on the sensitivity list [F:/TEST/Taxi/Taxi.srcs/sources_1/new/work.v:130]
+INFO: [Synth 8-6155] done synthesizing module 'work' (3#1) [F:/TEST/Taxi/Taxi.srcs/sources_1/new/work.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Taxi' (4#1) [F:/TEST/Taxi/Taxi.srcs/sources_1/new/Taxi.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 852.887 ; gain = 220.340
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 852.887 ; gain = 220.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 852.887 ; gain = 220.340
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/TEST/Taxi/Taxi.srcs/constrs_1/new/const.xdc]
+Finished Parsing XDC File [F:/TEST/Taxi/Taxi.srcs/constrs_1/new/const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/TEST/Taxi/Taxi.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Taxi_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Taxi_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 991.840 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 991.840 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 991.840 ; gain = 359.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 991.840 ; gain = 359.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 991.840 ; gain = 359.293
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'ST_reg' in module 'JoggleRemove'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      S0 |                              000 |                              000
+                      S1 |                              001 |                              001
+                      S3 |                              010 |                              011
+                      S4 |                              011 |                              100
+                      S5 |                              100 |                              101
+                      S2 |                              101 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ST_reg' using encoding 'sequential' in module 'JoggleRemove'
+WARNING: [Synth 8-327] inferring latch for variable 'seg_reg' [F:/TEST/Taxi/Taxi.srcs/sources_1/new/work.v:134]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 991.840 ; gain = 359.293
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 8     
+	   2 Input      9 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	  22 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   6 Input      3 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 30    
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 5     
+	  11 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Fdiv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module JoggleRemove 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 1     
+Module work 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 8     
+	   8 Input      8 Bit        Muxes := 1     
+	  22 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP fare0, operation Mode is: (C:0xcc)+A*(B:0x12).
+DSP Report: operator fare0 is absorbed into DSP fare0.
+DSP Report: operator fare1 is absorbed into DSP fare0.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (w/\watingtime_reg[0]_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (w/\watingtime_reg[3]_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (w/\watingtime_reg[2]_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (w/\watingtime_reg[1]_C )
+WARNING: [Synth 8-3332] Sequential element (watingtime_reg[3]_C) is unused and will be removed from module work.
+WARNING: [Synth 8-3332] Sequential element (watingtime_reg[2]_C) is unused and will be removed from module work.
+WARNING: [Synth 8-3332] Sequential element (watingtime_reg[1]_C) is unused and will be removed from module work.
+WARNING: [Synth 8-3332] Sequential element (watingtime_reg[0]_C) is unused and will be removed from module work.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|work        | (C:0xcc)+A*(B:0x12) | 16     | 5      | 8      | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     2|
+|2     |CARRY4  |   276|
+|3     |DSP48E1 |     1|
+|4     |LUT1    |    67|
+|5     |LUT2    |   297|
+|6     |LUT3    |   462|
+|7     |LUT4    |   253|
+|8     |LUT5    |   229|
+|9     |LUT6    |   428|
+|10    |FDCE    |    32|
+|11    |FDPE    |    20|
+|12    |FDRE    |    97|
+|13    |LD      |     8|
+|14    |LDC     |    20|
+|15    |IBUF    |     6|
+|16    |OBUF    |    16|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+---------------+------+
+|      |Instance |Module         |Cells |
++------+---------+---------------+------+
+|1     |top      |               |  2214|
+|2     |  f      |Fdiv           |   125|
+|3     |  j1     |JoggleRemove   |     9|
+|4     |  j2     |JoggleRemove_0 |     9|
+|5     |  j3     |JoggleRemove_1 |     9|
+|6     |  j4     |JoggleRemove_2 |     8|
+|7     |  j5     |JoggleRemove_3 |     8|
+|8     |  w      |work           |  1412|
++------+---------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1196.023 ; gain = 563.477
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1196.023 ; gain = 424.523
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1196.023 ; gain = 563.477
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 305 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1196.023 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 28 instances were transformed.
+  LD => LDCE: 8 instances
+  LDC => LDCE: 20 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1196.023 ; gain = 841.066
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1196.023 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'F:/TEST/Taxi/Taxi.runs/synth_1/Taxi.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Taxi_utilization_synth.rpt -pb Taxi_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jan  9 16:38:39 2021...
